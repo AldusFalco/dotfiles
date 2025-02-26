@@ -4,9 +4,11 @@ set number
 " set highligh search
 set hlsearch
 
-" use mouse clicks
-set mouse=a
+" use mouse click options
 " set mouse=v
+" set -g mouse on
+set mouse=a
+
 
 " use gtags script (uncomment if want to use)
 " so /opt/gtags.vim
