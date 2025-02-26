@@ -1,15 +1,20 @@
 syntax on
 set number
 
+" set highligh search
+set hlsearch
+
 " use mouse clicks
 set mouse=a
+" set mouse=v
 
 " use gtags script (uncomment if want to use)
 " so /opt/gtags.vim
 
+" also delek is good
 colorscheme slate
 
-" use copy and paste
+" use copy and paste shortcuts: Ctrl-c and Ctrl-v
 vnoremap <C-c> "+y
 map <C-v> "+P
 
@@ -18,6 +23,9 @@ command! -nargs=+ Grep execute 'silent grep! -I -r -n . -e <args>' | copen | exe
 
 " shift-control-* Greps for the word under the cursor
 :nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
+
+" for linux copy paste? 
+" vnoremap <C-c> "*y :let @+=@*<CR>
 
 " prevent vulns
 set modelines=0
