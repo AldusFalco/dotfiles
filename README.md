@@ -9,4 +9,4 @@ I would like to use a method I learned from a colleague [samfelt](https://github
 
 ## doing a Raw setup
 - Change vim and tmux confs
-- Change transparency to 0 and font size (Courier 14)
+- Change transparency to 0 and font size (14 pt)
