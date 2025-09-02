@@ -3,25 +3,28 @@
 # ~/.tmux.conf 
 
 # ——— Terminal & Compatibility ———
-# Works everywhere, no truecolor required
-set -g default-terminal "screen-256color"
-set -g history-limit 10000
+# ——— Monokai Theme (With Active Pane Highlight) ———
+# Uses standard 256-color palette — no Nerd Fonts, no hex
 
-# ——— Monokai Colors (256-color palette) ———
-# Background: dark gray
-# Foreground: light gray
-# Accents: orange, blue, green
+# Status bar (dark background, light text)
+set -g status-style bg=colour235,fg=colour231
 
-# Status bar
-set -g status-style bg=colour235,fg=colour231  # Dark bg, light text
-set -g status-left-style bg=colour166          # Orange highlight
-set -g status-right-style bg=colour24
-
-# Pane borders
-set -g pane-border-style fg=colour238          # Gray
-set -g pane-active-border-style fg=colour166,bold  # Orange, bold
+# Pane borders: subtle gray for inactive, bold orange for active
+set -g pane-border-style fg=colour238          # Inactive panes
+set -g pane-active-border-style fg=colour166,bold  # Active pane: bright orange + bold
 
 # Messages (e.g., display-message)
 set -g message-style bg=colour235,fg=colour166,bold
+
+# Copy mode: highlight in orange
+setw -g mode-style bg=colour166,fg=colour16
+
+# Status bar (clean, no symbols)
+set -g status-left '#[bg=colour166,fg=colour16] #S #[default] | '
+set -g status-right '%H:%M | %d-%b'
+
+# Window tabs
+setw -g window-status-format '#[fg=colour240]#I:#W'
+setw -g window-status-current-format '#[fg=colour166,bold]#I:#W'
 
 ```
