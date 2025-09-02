@@ -1,0 +1,27 @@
+— Monokai Theme (Portable)
+```
+# ~/.tmux.conf 
+
+# ——— Terminal & Compatibility ———
+# Works everywhere, no truecolor required
+set -g default-terminal "screen-256color"
+set -g history-limit 10000
+
+# ——— Monokai Colors (256-color palette) ———
+# Background: dark gray
+# Foreground: light gray
+# Accents: orange, blue, green
+
+# Status bar
+set -g status-style bg=colour235,fg=colour231  # Dark bg, light text
+set -g status-left-style bg=colour166          # Orange highlight
+set -g status-right-style bg=colour24
+
+# Pane borders
+set -g pane-border-style fg=colour238          # Gray
+set -g pane-active-border-style fg=colour166,bold  # Orange, bold
+
+# Messages (e.g., display-message)
+set -g message-style bg=colour235,fg=colour166,bold
+
+```
